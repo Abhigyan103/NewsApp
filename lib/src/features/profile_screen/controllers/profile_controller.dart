@@ -1,9 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:fpdart/fpdart.dart';
 
-import '../../../providers/type_defs.dart';
-import '../../../models/user_model.dart';
-import '../../../providers/utils_providers.dart';
 import '../repositories/profile_repository.dart';
 
 final profileControllerProvider =

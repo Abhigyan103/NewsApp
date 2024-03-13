@@ -40,7 +40,7 @@ class _MyAppState extends ConsumerState<MyApp> {
     FirebaseAuth.instance.authStateChanges().listen((event) {
       if (event != null) {
         getData(event).then((value) {
-          GoRouter.of(context).refresh();
+          myGoRouter.refresh();
         });
       }
     });

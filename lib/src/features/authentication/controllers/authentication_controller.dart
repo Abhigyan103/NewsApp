@@ -1,14 +1,10 @@
 import 'dart:async';
-import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:fpdart/fpdart.dart';
-import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../../route_generator.dart';
 import '../../../core/utils/utils.dart';
 import '../../../models/user_model.dart';
 import '../../../providers/type_defs.dart';

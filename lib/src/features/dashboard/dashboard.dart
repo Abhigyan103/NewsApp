@@ -1,6 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:news_app/src/features/news/news_screen.dart';
 
 import '../../providers/utils_providers.dart';
 import '../profile_screen/screens/profile_screen.dart';
@@ -14,8 +14,8 @@ class Dashboard extends ConsumerStatefulWidget {
 
 class _DashboardState extends ConsumerState<Dashboard> {
   List<Widget> pages = [
-    // const MatchesPage(),
-    // const SearchScreen(),
+    const NewsPage(),
+    const ProfileScreen(),
     const ProfileScreen()
   ];
 
@@ -28,13 +28,12 @@ class _DashboardState extends ConsumerState<Dashboard> {
           onTap: (value) {
             ref.read(navigationIndexProvider.notifier).update(value);
           },
-          items: [
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.newspaper), label: 'News'),
-            const BottomNavigationBarItem(
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.newspaper), label: 'News'),
+            BottomNavigationBarItem(
                 icon: Icon(Icons.favorite), label: 'Favourites'),
             BottomNavigationBarItem(
-                icon: const Icon(Icons.perm_identity), label: 'Profile'),
+                icon: Icon(Icons.perm_identity), label: 'Profile'),
           ]),
     );
   }
